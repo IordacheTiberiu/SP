@@ -1,0 +1,153 @@
+t=0:0.002:15;
+%a)
+niv = [-1 1];
+figure(1)
+hold on
+title('Semnal Dreptunghiular multinivel aleator a) 2ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+% Graficul fiecarui subpunct a fost creat intr-un grafic separat utiliand
+%   comanda figure(n). y=datasample(data,k) returneaza k observatii extrase
+%   aleator din matricea/vectorul data. y=rectpuls(t,w) genereaza un impuls
+%   de unitate A=1 dreptunghiular de durata w centrat in t. hold on retine
+%   graficele deja existente in sistemul de axe asupra caruia se opereaza.
+% Se goloseste aceeasi metoda pentru celelealte subpuncte si la celelalte
+%  rezolutii temporale.
+
+%b)
+niv = [-3 -1 3 1];
+figure(2)
+hold on
+title('Semnal Dreptunghiular multinivel aleator b)2ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+%c)
+niv = [-5 -3 -1 3 1 5];
+figure(3)
+hold on
+title('Semnal Dreptunghiular multinivel aleator c)2ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+%d)
+niv = [-7 -5 -3 -1 3 1 5 7];
+figure(4)
+hold on
+title('Semnal Dreptunghiular multinivel aleator d)2ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+t=0:0.02:15;
+%a)
+niv = [-1 1];
+figure(5)
+hold on
+title('Semnal Dreptunghiular multinivel aleator a) 20ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+%b)
+niv = [-3 -1 3 1];
+figure(6)
+hold on
+title('Semnal Dreptunghiular multinivel aleator b)20ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+%c)
+niv = [-5 -3 -1 3 1 5];
+figure(7)
+hold on
+title('Semnal Dreptunghiular multinivel aleator c)20ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+%d)
+niv = [-7 -5 -3 -1 3 1 5 7];
+figure(8)
+hold on
+title('Semnal Dreptunghiular multinivel aleator d)20ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+t=0:0.2:15;
+%a)
+niv = [-1 1];
+figure(9)
+hold on
+title('Semnal Dreptunghiular multinivel aleator a) 200ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+%b)
+niv = [-3 -1 3 1];
+figure(10)
+hold on
+title('Semnal Dreptunghiular multinivel aleator b)200ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+%c)
+niv = [-5 -3 -1 3 1 5];
+figure(11)
+hold on
+title('Semnal Dreptunghiular multinivel aleator c)200ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end
+
+%d)
+niv = [-7 -5 -3 -1 3 1 5 7];
+figure(12)
+hold on
+title('Semnal Dreptunghiular multinivel aleator d)200ms')
+xlabel('Timp[s]')
+ylabel('Amplitudine[V]')
+for n=0:0.25:40
+    x = datasample(niv, 1)
+    plot(t,x*rectpuls(t-n, 0.25) )
+end

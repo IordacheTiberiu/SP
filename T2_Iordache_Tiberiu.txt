@@ -1,0 +1,48 @@
+
+T=40;
+f=1/40;
+wo=2*pi*f;
+duty=(9/40)*100;
+timp=-80:0.02:80;
+
+sq=0.5+0.5*square(2*pi*1/40*timp,duty);
+subplot(3,1,1)
+plot(timp,sq),grid,axis([-80 80 -0.5 1.5])
+
+ nneg=-50:-1;
+ npos=1:50;
+ n=nneg;
+ Fnneg=j*(exp(-j*n*18/40*pi)-1)./(2*pi*n);
+ n=npos;
+ Fnpos=j*(exp(-j*n*18/40*pi)-1)./(2*pi*n);
+ F0=9/40;
+ n=[nneg,0,npos];
+ Fn=[Fnneg,F0,Fnpos];
+ k=0;
+ for timp=-80:.02:80
+k=k+1;
+fapprox(k)=sum(Fn.*(exp(j*n*2*pi*timp/40)));
+end
+ timp=-80:.02:80;
+
+ subplot(3,1,2);
+ plot(timp,real(fapprox),timp,sq),grid,axis([-80 80 -0.5 1.5])
+
+ 
+k=-50:1:50;
+
+syms t
+coeficient=1/40*int(1*exp(-i*k*2*pi*f*t),t,0,9)
+
+armonica=2*abs(coeficient)
+armonica(51)=1/40*9 
+subplot(3,1,3)
+stem(k,armonica),grid,axis([-5 5 0 0.5])
+
+%   Cu cat vom insuma mai multe armonici, cu atat semnalul obtinut, 
+% va fi mai asemanator cu cel initial. Putem observa ca 50 de armonici sunt
+% suficiente a semnalul obtinut sa arate aproximativ identic cu cel
+% initial. 
+%   Deoarece semnalul este periodic, spectrul de amplitudini rezultat este
+% discret, existand semnal numai la multiplii frecventei fundamentale,
+% care corespunde perioadei semnalului.
